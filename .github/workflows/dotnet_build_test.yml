@@ -14,6 +14,13 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    strategy:
+     matrix:
+       project:
+        - TestProject1/TestProject1.csproj
+        - TestProject2/TestProject2.csproj
+        - TestProject3/TestProject3.csproj
+
     steps:
     - uses: actions/checkout@v4
     - name: Setup .NET
